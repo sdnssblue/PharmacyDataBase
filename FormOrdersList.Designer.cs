@@ -34,8 +34,8 @@ namespace PharmacyDataBase
             System.Windows.Forms.Label дата_и_времяLabel;
             System.Windows.Forms.Label ценаLabel;
             System.Windows.Forms.Label iD_СотрудникаLabel;
+            System.Windows.Forms.Label сотрудникLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrdersList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.OrderBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.заказBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -56,41 +56,47 @@ namespace PharmacyDataBase
             this.ценаTextBox = new System.Windows.Forms.TextBox();
             this.iD_СотрудникаTextBox = new System.Windows.Forms.TextBox();
             this.groupBoxItemsInOrder = new System.Windows.Forms.GroupBox();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButtonAddItem = new System.Windows.Forms.ToolStripButton();
             this.товары_в_заказеBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStripLabelCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButtonDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBoxPostionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonMoveNext = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonMoveLast = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.buttonEmployee = new System.Windows.Forms.Button();
             this.заказTableAdapter = new PharmacyDataBase.PharmacyDataSetTableAdapters.ЗаказTableAdapter();
             this.tableAdapterManager = new PharmacyDataBase.PharmacyDataSetTableAdapters.TableAdapterManager();
             this.товары_в_заказеTableAdapter = new PharmacyDataBase.PharmacyDataSetTableAdapters.Товары_в_заказеTableAdapter();
-            this.buttonEmployee = new System.Windows.Forms.Button();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.товары_в_заказеBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.товары_в_заказеBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.сотрудникBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.сотрудникTableAdapter = new PharmacyDataBase.PharmacyDataSetTableAdapters.СотрудникTableAdapter();
+            this.сотрудникLabel1 = new System.Windows.Forms.Label();
             this.товары_в_заказеDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             iD_ЗаказаLabel = new System.Windows.Forms.Label();
             дата_и_времяLabel = new System.Windows.Forms.Label();
             ценаLabel = new System.Windows.Forms.Label();
             iD_СотрудникаLabel = new System.Windows.Forms.Label();
+            сотрудникLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.OrderBindingNavigator)).BeginInit();
             this.OrderBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.заказBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet)).BeginInit();
             this.groupBoxItemsInOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеBindingNavigator)).BeginInit();
-            this.товары_в_заказеBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,6 +136,15 @@ namespace PharmacyDataBase
             iD_СотрудникаLabel.TabIndex = 7;
             iD_СотрудникаLabel.Text = "ID Сотрудника:";
             // 
+            // сотрудникLabel
+            // 
+            сотрудникLabel.AutoSize = true;
+            сотрудникLabel.Location = new System.Drawing.Point(15, 141);
+            сотрудникLabel.Name = "сотрудникLabel";
+            сотрудникLabel.Size = new System.Drawing.Size(63, 13);
+            сотрудникLabel.TabIndex = 13;
+            сотрудникLabel.Text = "Сотрудник:";
+            // 
             // OrderBindingNavigator
             // 
             this.OrderBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -157,7 +172,7 @@ namespace PharmacyDataBase
             this.OrderBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.OrderBindingNavigator.Name = "OrderBindingNavigator";
             this.OrderBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.OrderBindingNavigator.Size = new System.Drawing.Size(752, 25);
+            this.OrderBindingNavigator.Size = new System.Drawing.Size(801, 25);
             this.OrderBindingNavigator.TabIndex = 0;
             this.OrderBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -271,7 +286,7 @@ namespace PharmacyDataBase
             this.iD_ЗаказаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.заказBindingSource, "ID Заказа", true));
             this.iD_ЗаказаTextBox.Location = new System.Drawing.Point(101, 29);
             this.iD_ЗаказаTextBox.Name = "iD_ЗаказаTextBox";
-            this.iD_ЗаказаTextBox.Size = new System.Drawing.Size(363, 20);
+            this.iD_ЗаказаTextBox.Size = new System.Drawing.Size(468, 20);
             this.iD_ЗаказаTextBox.TabIndex = 2;
             // 
             // дата_и_времяDateTimePicker
@@ -279,7 +294,7 @@ namespace PharmacyDataBase
             this.дата_и_времяDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.заказBindingSource, "Дата и время", true));
             this.дата_и_времяDateTimePicker.Location = new System.Drawing.Point(101, 55);
             this.дата_и_времяDateTimePicker.Name = "дата_и_времяDateTimePicker";
-            this.дата_и_времяDateTimePicker.Size = new System.Drawing.Size(363, 20);
+            this.дата_и_времяDateTimePicker.Size = new System.Drawing.Size(468, 20);
             this.дата_и_времяDateTimePicker.TabIndex = 4;
             // 
             // ценаTextBox
@@ -287,7 +302,7 @@ namespace PharmacyDataBase
             this.ценаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.заказBindingSource, "Цена", true));
             this.ценаTextBox.Location = new System.Drawing.Point(101, 81);
             this.ценаTextBox.Name = "ценаTextBox";
-            this.ценаTextBox.Size = new System.Drawing.Size(363, 20);
+            this.ценаTextBox.Size = new System.Drawing.Size(468, 20);
             this.ценаTextBox.TabIndex = 6;
             // 
             // iD_СотрудникаTextBox
@@ -295,24 +310,162 @@ namespace PharmacyDataBase
             this.iD_СотрудникаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.заказBindingSource, "ID Сотрудника", true));
             this.iD_СотрудникаTextBox.Location = new System.Drawing.Point(101, 107);
             this.iD_СотрудникаTextBox.Name = "iD_СотрудникаTextBox";
-            this.iD_СотрудникаTextBox.Size = new System.Drawing.Size(363, 20);
+            this.iD_СотрудникаTextBox.Size = new System.Drawing.Size(468, 20);
             this.iD_СотрудникаTextBox.TabIndex = 8;
             // 
             // groupBoxItemsInOrder
             // 
             this.groupBoxItemsInOrder.Controls.Add(this.товары_в_заказеDataGridView);
-            this.groupBoxItemsInOrder.Controls.Add(this.товары_в_заказеBindingNavigator);
-            this.groupBoxItemsInOrder.Location = new System.Drawing.Point(15, 144);
+            this.groupBoxItemsInOrder.Controls.Add(this.bindingNavigator1);
+            this.groupBoxItemsInOrder.Location = new System.Drawing.Point(15, 206);
             this.groupBoxItemsInOrder.Name = "groupBoxItemsInOrder";
-            this.groupBoxItemsInOrder.Size = new System.Drawing.Size(449, 300);
+            this.groupBoxItemsInOrder.Size = new System.Drawing.Size(554, 281);
             this.groupBoxItemsInOrder.TabIndex = 9;
             this.groupBoxItemsInOrder.TabStop = false;
             this.groupBoxItemsInOrder.Text = "Товары в заказе";
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = this.toolStripButtonAddItem;
+            this.bindingNavigator1.BindingSource = this.товары_в_заказеBindingSource;
+            this.bindingNavigator1.CountItem = this.toolStripLabelCountItem;
+            this.bindingNavigator1.CountItemFormat = "из {0}";
+            this.bindingNavigator1.DeleteItem = this.toolStripButtonDeleteItem;
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonMoveFirstItem,
+            this.toolStripButtonMovePreviousItem,
+            this.toolStripSeparator,
+            this.toolStripTextBoxPostionItem,
+            this.toolStripLabelCountItem,
+            this.toolStripSeparator1,
+            this.toolStripButtonMoveNext,
+            this.toolStripButtonMoveLast,
+            this.toolStripSeparator2,
+            this.toolStripButtonAddItem,
+            this.toolStripButtonDeleteItem,
+            this.toolStripButtonSaveItem});
+            this.bindingNavigator1.Location = new System.Drawing.Point(3, 16);
+            this.bindingNavigator1.MoveFirstItem = this.toolStripButtonMoveNext;
+            this.bindingNavigator1.MoveLastItem = this.toolStripButtonMoveLast;
+            this.bindingNavigator1.MoveNextItem = this.toolStripButtonMoveNext;
+            this.bindingNavigator1.MovePreviousItem = this.toolStripButtonMovePreviousItem;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.toolStripTextBoxPostionItem;
+            this.bindingNavigator1.Size = new System.Drawing.Size(548, 25);
+            this.bindingNavigator1.TabIndex = 2;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // toolStripButtonAddItem
+            // 
+            this.toolStripButtonAddItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonAddItem.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonAddItem.Image")));
+            this.toolStripButtonAddItem.Name = "toolStripButtonAddItem";
+            this.toolStripButtonAddItem.RightToLeftAutoMirrorImage = true;
+            this.toolStripButtonAddItem.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonAddItem.Text = "Добавить запись";
             // 
             // товары_в_заказеBindingSource
             // 
             this.товары_в_заказеBindingSource.DataMember = "FK_Товары в заказе_Заказ";
             this.товары_в_заказеBindingSource.DataSource = this.заказBindingSource;
+            // 
+            // toolStripLabelCountItem
+            // 
+            this.toolStripLabelCountItem.Name = "toolStripLabelCountItem";
+            this.toolStripLabelCountItem.Size = new System.Drawing.Size(36, 22);
+            this.toolStripLabelCountItem.Text = "из {0}";
+            this.toolStripLabelCountItem.ToolTipText = "Total number of items";
+            // 
+            // toolStripButtonDeleteItem
+            // 
+            this.toolStripButtonDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonDeleteItem.Image")));
+            this.toolStripButtonDeleteItem.Name = "toolStripButtonDeleteItem";
+            this.toolStripButtonDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.toolStripButtonDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonDeleteItem.Text = "Удалить запись";
+            // 
+            // toolStripButtonMoveFirstItem
+            // 
+            this.toolStripButtonMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonMoveFirstItem.Image")));
+            this.toolStripButtonMoveFirstItem.Name = "toolStripButtonMoveFirstItem";
+            this.toolStripButtonMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.toolStripButtonMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonMoveFirstItem.Text = "Первая запись, в начало";
+            // 
+            // toolStripButtonMovePreviousItem
+            // 
+            this.toolStripButtonMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonMovePreviousItem.Image")));
+            this.toolStripButtonMovePreviousItem.Name = "toolStripButtonMovePreviousItem";
+            this.toolStripButtonMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.toolStripButtonMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonMovePreviousItem.Text = "Предыдущая запись, назад";
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBoxPostionItem
+            // 
+            this.toolStripTextBoxPostionItem.AccessibleName = "Position";
+            this.toolStripTextBoxPostionItem.AutoSize = false;
+            this.toolStripTextBoxPostionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBoxPostionItem.Name = "toolStripTextBoxPostionItem";
+            this.toolStripTextBoxPostionItem.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBoxPostionItem.Text = "0";
+            this.toolStripTextBoxPostionItem.ToolTipText = "Current position";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButtonMoveNext
+            // 
+            this.toolStripButtonMoveNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonMoveNext.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonMoveNext.Image")));
+            this.toolStripButtonMoveNext.Name = "toolStripButtonMoveNext";
+            this.toolStripButtonMoveNext.RightToLeftAutoMirrorImage = true;
+            this.toolStripButtonMoveNext.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonMoveNext.Text = "Следующая запись, вперед";
+            // 
+            // toolStripButtonMoveLast
+            // 
+            this.toolStripButtonMoveLast.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonMoveLast.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonMoveLast.Image")));
+            this.toolStripButtonMoveLast.Name = "toolStripButtonMoveLast";
+            this.toolStripButtonMoveLast.RightToLeftAutoMirrorImage = true;
+            this.toolStripButtonMoveLast.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonMoveLast.Text = "Последняя запись, в конец";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButtonSaveItem
+            // 
+            this.toolStripButtonSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSaveItem.Image")));
+            this.toolStripButtonSaveItem.Name = "toolStripButtonSaveItem";
+            this.toolStripButtonSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonSaveItem.Text = "Сохранить";
+            this.toolStripButtonSaveItem.Click += new System.EventHandler(this.toolStripButtonSaveItem_Click);
+            // 
+            // buttonEmployee
+            // 
+            this.buttonEmployee.Image = global::PharmacyDataBase.Properties.Resources.employee_icon;
+            this.buttonEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEmployee.Location = new System.Drawing.Point(586, 81);
+            this.buttonEmployee.Name = "buttonEmployee";
+            this.buttonEmployee.Size = new System.Drawing.Size(154, 46);
+            this.buttonEmployee.TabIndex = 10;
+            this.buttonEmployee.Text = "Сотрудник";
+            this.buttonEmployee.UseVisualStyleBackColor = true;
+            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
             // 
             // заказTableAdapter
             // 
@@ -326,198 +479,85 @@ namespace PharmacyDataBase
             this.tableAdapterManager.ОтчетTableAdapter = null;
             this.tableAdapterManager.СотрудникTableAdapter = null;
             this.tableAdapterManager.ТоварTableAdapter = null;
-            this.tableAdapterManager.Товары_в_заказеTableAdapter = null;
+            this.tableAdapterManager.Товары_в_заказеTableAdapter = this.товары_в_заказеTableAdapter;
             // 
             // товары_в_заказеTableAdapter
             // 
             this.товары_в_заказеTableAdapter.ClearBeforeFill = true;
             // 
-            // buttonEmployee
+            // сотрудникBindingSource
             // 
-            this.buttonEmployee.Image = global::PharmacyDataBase.Properties.Resources.employee_icon;
-            this.buttonEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEmployee.Location = new System.Drawing.Point(481, 81);
-            this.buttonEmployee.Name = "buttonEmployee";
-            this.buttonEmployee.Size = new System.Drawing.Size(154, 46);
-            this.buttonEmployee.TabIndex = 10;
-            this.buttonEmployee.Text = "Сотрудник";
-            this.buttonEmployee.UseVisualStyleBackColor = true;
-            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
+            this.сотрудникBindingSource.DataMember = "Сотрудник";
+            this.сотрудникBindingSource.DataSource = this.pharmacyDataSet;
             // 
-            // toolStripButton3
+            // сотрудникTableAdapter
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "Первая запись, в начало";
+            this.сотрудникTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripButton4
+            // сотрудникLabel1
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "Предыдущая запись, назад";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.AccessibleName = "Position";
-            this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
-            this.toolStripTextBox1.Text = "0";
-            this.toolStripTextBox1.ToolTipText = "Current position";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(36, 22);
-            this.toolStripLabel1.Text = "из {0}";
-            this.toolStripLabel1.ToolTipText = "Total number of items";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton5.Text = "Следующая запись, вперед";
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton6.Text = "Последняя запись, в конец";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Добавить запись";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "Удалить запись";
-            // 
-            // товары_в_заказеBindingNavigatorSaveItem
-            // 
-            this.товары_в_заказеBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.товары_в_заказеBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("товары_в_заказеBindingNavigatorSaveItem.Image")));
-            this.товары_в_заказеBindingNavigatorSaveItem.Name = "товары_в_заказеBindingNavigatorSaveItem";
-            this.товары_в_заказеBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.товары_в_заказеBindingNavigatorSaveItem.Text = "Сохранить";
-            this.товары_в_заказеBindingNavigatorSaveItem.Click += new System.EventHandler(this.товары_в_заказеBindingNavigatorSaveItem_Click);
-            // 
-            // товары_в_заказеBindingNavigator
-            // 
-            this.товары_в_заказеBindingNavigator.AddNewItem = this.toolStripButton1;
-            this.товары_в_заказеBindingNavigator.BindingSource = this.товары_в_заказеBindingSource;
-            this.товары_в_заказеBindingNavigator.CountItem = this.toolStripLabel1;
-            this.товары_в_заказеBindingNavigator.CountItemFormat = "из {0}";
-            this.товары_в_заказеBindingNavigator.DeleteItem = this.toolStripButton2;
-            this.товары_в_заказеBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripSeparator1,
-            this.toolStripTextBox1,
-            this.toolStripLabel1,
-            this.toolStripSeparator2,
-            this.toolStripButton5,
-            this.toolStripButton6,
-            this.toolStripSeparator3,
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.товары_в_заказеBindingNavigatorSaveItem});
-            this.товары_в_заказеBindingNavigator.Location = new System.Drawing.Point(3, 16);
-            this.товары_в_заказеBindingNavigator.MoveFirstItem = this.toolStripButton3;
-            this.товары_в_заказеBindingNavigator.MoveLastItem = this.toolStripButton6;
-            this.товары_в_заказеBindingNavigator.MoveNextItem = this.toolStripButton5;
-            this.товары_в_заказеBindingNavigator.MovePreviousItem = this.toolStripButton4;
-            this.товары_в_заказеBindingNavigator.Name = "товары_в_заказеBindingNavigator";
-            this.товары_в_заказеBindingNavigator.PositionItem = this.toolStripTextBox1;
-            this.товары_в_заказеBindingNavigator.Size = new System.Drawing.Size(443, 25);
-            this.товары_в_заказеBindingNavigator.TabIndex = 1;
-            this.товары_в_заказеBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Цена товара";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Цена товара";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Количество";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Количество";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID Товара";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID Товара";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID Заказа";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID Заказа";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.сотрудникLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.заказBindingSource, "Сотрудник", true));
+            this.сотрудникLabel1.ForeColor = System.Drawing.Color.DarkRed;
+            this.сотрудникLabel1.Location = new System.Drawing.Point(98, 141);
+            this.сотрудникLabel1.Name = "сотрудникLabel1";
+            this.сотрудникLabel1.Size = new System.Drawing.Size(100, 23);
+            this.сотрудникLabel1.TabIndex = 14;
+            this.сотрудникLabel1.Text = "label1";
             // 
             // товары_в_заказеDataGridView
             // 
             this.товары_в_заказеDataGridView.AutoGenerateColumns = false;
             this.товары_в_заказеDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.товары_в_заказеDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
             this.товары_в_заказеDataGridView.DataSource = this.товары_в_заказеBindingSource;
-            this.товары_в_заказеDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.товары_в_заказеDataGridView.Location = new System.Drawing.Point(3, 41);
+            this.товары_в_заказеDataGridView.Location = new System.Drawing.Point(3, 44);
             this.товары_в_заказеDataGridView.Name = "товары_в_заказеDataGridView";
-            this.товары_в_заказеDataGridView.Size = new System.Drawing.Size(443, 256);
-            this.товары_в_заказеDataGridView.TabIndex = 0;
+            this.товары_в_заказеDataGridView.Size = new System.Drawing.Size(545, 231);
+            this.товары_в_заказеDataGridView.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ID_Заказа";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ID_Заказа";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ID_Товара";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ID_Товара";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Количество";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Количество";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Цена";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Цена";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Стоимость";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Стоимость";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // FormOrdersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 456);
+            this.ClientSize = new System.Drawing.Size(801, 505);
+            this.Controls.Add(сотрудникLabel);
+            this.Controls.Add(this.сотрудникLabel1);
             this.Controls.Add(this.buttonEmployee);
             this.Controls.Add(this.groupBoxItemsInOrder);
             this.Controls.Add(iD_ЗаказаLabel);
@@ -531,6 +571,7 @@ namespace PharmacyDataBase
             this.Controls.Add(this.OrderBindingNavigator);
             this.Name = "FormOrdersList";
             this.ShowIcon = false;
+            this.Text = "Список заказов";
             this.Load += new System.EventHandler(this.FormOrders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.OrderBindingNavigator)).EndInit();
             this.OrderBindingNavigator.ResumeLayout(false);
@@ -539,10 +580,11 @@ namespace PharmacyDataBase
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet)).EndInit();
             this.groupBoxItemsInOrder.ResumeLayout(false);
             this.groupBoxItemsInOrder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеBindingNavigator)).EndInit();
-            this.товары_в_заказеBindingNavigator.ResumeLayout(false);
-            this.товары_в_заказеBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -576,23 +618,27 @@ namespace PharmacyDataBase
         private System.Windows.Forms.BindingSource товары_в_заказеBindingSource;
         private PharmacyDataSetTableAdapters.Товары_в_заказеTableAdapter товары_в_заказеTableAdapter;
         private System.Windows.Forms.Button buttonEmployee;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripButton toolStripButtonAddItem;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelCountItem;
+        private System.Windows.Forms.ToolStripButton toolStripButtonDeleteItem;
+        private System.Windows.Forms.ToolStripButton toolStripButtonMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton toolStripButtonMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxPostionItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripButtonMoveNext;
+        private System.Windows.Forms.ToolStripButton toolStripButtonMoveLast;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButtonSaveItem;
+        private System.Windows.Forms.BindingSource сотрудникBindingSource;
+        private PharmacyDataSetTableAdapters.СотрудникTableAdapter сотрудникTableAdapter;
+        private System.Windows.Forms.Label сотрудникLabel1;
         private System.Windows.Forms.DataGridView товары_в_заказеDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.BindingNavigator товары_в_заказеBindingNavigator;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton товары_в_заказеBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

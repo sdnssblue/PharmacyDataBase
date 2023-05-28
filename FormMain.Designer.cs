@@ -60,6 +60,7 @@
             // 
             // MenuStripMain
             // 
+            this.MenuStripMain.BackColor = System.Drawing.Color.MediumTurquoise;
             this.MenuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem,
             this.ManualToolStripMenuItem,
@@ -139,7 +140,7 @@
             this.OrdersToolStripMenuItem.Image = global::PharmacyDataBase.Properties.Resources.order;
             this.OrdersToolStripMenuItem.Name = "OrdersToolStripMenuItem";
             this.OrdersToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
-            this.OrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.OrdersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.OrdersToolStripMenuItem.Text = "Заказы";
             this.OrdersToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuOrder_Click);
             // 
@@ -148,7 +149,7 @@
             this.ReportsToolStripMenuItem.Image = global::PharmacyDataBase.Properties.Resources.report;
             this.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem";
             this.ReportsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.ReportsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ReportsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ReportsToolStripMenuItem.Text = "Отчеты";
             this.ReportsToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuReport_Click);
             // 

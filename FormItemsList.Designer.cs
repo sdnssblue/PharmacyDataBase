@@ -30,11 +30,11 @@ namespace PharmacyDataBase
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label iD_ТовараLabel;
-            System.Windows.Forms.Label названиеLabel;
-            System.Windows.Forms.Label ценаLabel;
-            System.Windows.Forms.Label фотоLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormItemsList));
+            System.Windows.Forms.Label фотоLabel;
+            System.Windows.Forms.Label ценаLabel;
+            System.Windows.Forms.Label названиеLabel;
+            System.Windows.Forms.Label iD_ТовараLabel;
             this.pharmacyDataSet = new PharmacyDataBase.PharmacyDataSet();
             this.товарBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.товарTableAdapter = new PharmacyDataBase.PharmacyDataSetTableAdapters.ТоварTableAdapter();
@@ -52,58 +52,22 @@ namespace PharmacyDataBase
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.товарBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.iD_ТовараTextBox = new System.Windows.Forms.TextBox();
-            this.названиеTextBox = new System.Windows.Forms.TextBox();
-            this.ценаTextBox = new System.Windows.Forms.TextBox();
-            this.фотоPictureBox = new System.Windows.Forms.PictureBox();
-            this.buttonOpenPhoto = new System.Windows.Forms.Button();
             this.openFileDialogPhoto = new System.Windows.Forms.OpenFileDialog();
-            iD_ТовараLabel = new System.Windows.Forms.Label();
-            названиеLabel = new System.Windows.Forms.Label();
-            ценаLabel = new System.Windows.Forms.Label();
+            this.buttonOpenPhoto = new System.Windows.Forms.Button();
+            this.ценаTextBox = new System.Windows.Forms.TextBox();
+            this.названиеTextBox = new System.Windows.Forms.TextBox();
+            this.iD_ТовараTextBox = new System.Windows.Forms.TextBox();
+            this.фотоPictureBox = new System.Windows.Forms.PictureBox();
             фотоLabel = new System.Windows.Forms.Label();
+            ценаLabel = new System.Windows.Forms.Label();
+            названиеLabel = new System.Windows.Forms.Label();
+            iD_ТовараLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.товарBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.товарBindingNavigator)).BeginInit();
             this.товарBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.фотоPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // iD_ТовараLabel
-            // 
-            iD_ТовараLabel.AutoSize = true;
-            iD_ТовараLabel.Location = new System.Drawing.Point(12, 25);
-            iD_ТовараLabel.Name = "iD_ТовараLabel";
-            iD_ТовараLabel.Size = new System.Drawing.Size(61, 13);
-            iD_ТовараLabel.TabIndex = 1;
-            iD_ТовараLabel.Text = "ID Товара:";
-            // 
-            // названиеLabel
-            // 
-            названиеLabel.AutoSize = true;
-            названиеLabel.Location = new System.Drawing.Point(12, 51);
-            названиеLabel.Name = "названиеLabel";
-            названиеLabel.Size = new System.Drawing.Size(60, 13);
-            названиеLabel.TabIndex = 3;
-            названиеLabel.Text = "Название:";
-            // 
-            // ценаLabel
-            // 
-            ценаLabel.AutoSize = true;
-            ценаLabel.Location = new System.Drawing.Point(12, 77);
-            ценаLabel.Name = "ценаLabel";
-            ценаLabel.Size = new System.Drawing.Size(36, 13);
-            ценаLabel.TabIndex = 5;
-            ценаLabel.Text = "Цена:";
-            // 
-            // фотоLabel
-            // 
-            фотоLabel.AutoSize = true;
-            фотоLabel.Location = new System.Drawing.Point(12, 126);
-            фотоLabel.Name = "фотоLabel";
-            фотоLabel.Size = new System.Drawing.Size(38, 13);
-            фотоLabel.TabIndex = 9;
-            фотоLabel.Text = "Фото:";
             // 
             // pharmacyDataSet
             // 
@@ -255,39 +219,9 @@ namespace PharmacyDataBase
             this.товарBindingNavigatorSaveItem.Text = "Сохранить";
             this.товарBindingNavigatorSaveItem.Click += new System.EventHandler(this.товарBindingNavigatorSaveItem_Click);
             // 
-            // iD_ТовараTextBox
+            // openFileDialogPhoto
             // 
-            this.iD_ТовараTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.товарBindingSource, "ID Товара", true));
-            this.iD_ТовараTextBox.Location = new System.Drawing.Point(79, 22);
-            this.iD_ТовараTextBox.Name = "iD_ТовараTextBox";
-            this.iD_ТовараTextBox.Size = new System.Drawing.Size(200, 20);
-            this.iD_ТовараTextBox.TabIndex = 2;
-            // 
-            // названиеTextBox
-            // 
-            this.названиеTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.товарBindingSource, "Название", true));
-            this.названиеTextBox.Location = new System.Drawing.Point(79, 48);
-            this.названиеTextBox.Name = "названиеTextBox";
-            this.названиеTextBox.Size = new System.Drawing.Size(200, 20);
-            this.названиеTextBox.TabIndex = 4;
-            // 
-            // ценаTextBox
-            // 
-            this.ценаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.товарBindingSource, "Цена", true));
-            this.ценаTextBox.Location = new System.Drawing.Point(79, 74);
-            this.ценаTextBox.Name = "ценаTextBox";
-            this.ценаTextBox.Size = new System.Drawing.Size(200, 20);
-            this.ценаTextBox.TabIndex = 6;
-            // 
-            // фотоPictureBox
-            // 
-            this.фотоPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.товарBindingSource, "Фото", true));
-            this.фотоPictureBox.Location = new System.Drawing.Point(12, 155);
-            this.фотоPictureBox.Name = "фотоPictureBox";
-            this.фотоPictureBox.Size = new System.Drawing.Size(272, 137);
-            this.фотоPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.фотоPictureBox.TabIndex = 10;
-            this.фотоPictureBox.TabStop = false;
+            this.openFileDialogPhoto.FileName = "openFileDialog1";
             // 
             // buttonOpenPhoto
             // 
@@ -299,9 +233,75 @@ namespace PharmacyDataBase
             this.buttonOpenPhoto.UseVisualStyleBackColor = true;
             this.buttonOpenPhoto.Click += new System.EventHandler(this.buttonOpenPhoto_Click);
             // 
-            // openFileDialogPhoto
+            // фотоLabel
             // 
-            this.openFileDialogPhoto.FileName = "openFileDialog1";
+            фотоLabel.AutoSize = true;
+            фотоLabel.Location = new System.Drawing.Point(12, 126);
+            фотоLabel.Name = "фотоLabel";
+            фотоLabel.Size = new System.Drawing.Size(38, 13);
+            фотоLabel.TabIndex = 9;
+            фотоLabel.Text = "Фото:";
+            // 
+            // ценаTextBox
+            // 
+            this.ценаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.товарBindingSource, "Цена", true));
+            this.ценаTextBox.Location = new System.Drawing.Point(79, 74);
+            this.ценаTextBox.Name = "ценаTextBox";
+            this.ценаTextBox.Size = new System.Drawing.Size(200, 20);
+            this.ценаTextBox.TabIndex = 6;
+            // 
+            // ценаLabel
+            // 
+            ценаLabel.AutoSize = true;
+            ценаLabel.Location = new System.Drawing.Point(12, 77);
+            ценаLabel.Name = "ценаLabel";
+            ценаLabel.Size = new System.Drawing.Size(36, 13);
+            ценаLabel.TabIndex = 5;
+            ценаLabel.Text = "Цена:";
+            // 
+            // названиеTextBox
+            // 
+            this.названиеTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.товарBindingSource, "Название", true));
+            this.названиеTextBox.Location = new System.Drawing.Point(79, 48);
+            this.названиеTextBox.Name = "названиеTextBox";
+            this.названиеTextBox.Size = new System.Drawing.Size(200, 20);
+            this.названиеTextBox.TabIndex = 4;
+            // 
+            // названиеLabel
+            // 
+            названиеLabel.AutoSize = true;
+            названиеLabel.Location = new System.Drawing.Point(12, 51);
+            названиеLabel.Name = "названиеLabel";
+            названиеLabel.Size = new System.Drawing.Size(60, 13);
+            названиеLabel.TabIndex = 3;
+            названиеLabel.Text = "Название:";
+            // 
+            // iD_ТовараTextBox
+            // 
+            this.iD_ТовараTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.товарBindingSource, "ID Товара", true));
+            this.iD_ТовараTextBox.Location = new System.Drawing.Point(79, 22);
+            this.iD_ТовараTextBox.Name = "iD_ТовараTextBox";
+            this.iD_ТовараTextBox.Size = new System.Drawing.Size(200, 20);
+            this.iD_ТовараTextBox.TabIndex = 2;
+            // 
+            // iD_ТовараLabel
+            // 
+            iD_ТовараLabel.AutoSize = true;
+            iD_ТовараLabel.Location = new System.Drawing.Point(12, 25);
+            iD_ТовараLabel.Name = "iD_ТовараLabel";
+            iD_ТовараLabel.Size = new System.Drawing.Size(61, 13);
+            iD_ТовараLabel.TabIndex = 1;
+            iD_ТовараLabel.Text = "ID Товара:";
+            // 
+            // фотоPictureBox
+            // 
+            this.фотоPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.товарBindingSource, "Фото", true));
+            this.фотоPictureBox.Location = new System.Drawing.Point(12, 155);
+            this.фотоPictureBox.Name = "фотоPictureBox";
+            this.фотоPictureBox.Size = new System.Drawing.Size(272, 137);
+            this.фотоPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.фотоPictureBox.TabIndex = 10;
+            this.фотоPictureBox.TabStop = false;
             // 
             // FormItemsList
             // 
@@ -352,11 +352,11 @@ namespace PharmacyDataBase
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton товарBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox iD_ТовараTextBox;
-        private System.Windows.Forms.TextBox названиеTextBox;
-        private System.Windows.Forms.TextBox ценаTextBox;
-        private System.Windows.Forms.PictureBox фотоPictureBox;
-        private System.Windows.Forms.Button buttonOpenPhoto;
         private System.Windows.Forms.OpenFileDialog openFileDialogPhoto;
+        private System.Windows.Forms.Button buttonOpenPhoto;
+        private System.Windows.Forms.TextBox ценаTextBox;
+        private System.Windows.Forms.TextBox названиеTextBox;
+        private System.Windows.Forms.TextBox iD_ТовараTextBox;
+        private System.Windows.Forms.PictureBox фотоPictureBox;
     }
 }

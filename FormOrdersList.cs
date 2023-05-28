@@ -26,8 +26,10 @@ namespace PharmacyDataBase
 
         private void FormOrders_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pharmacyDataSet.Товары_в_заказе' table. You can move, or remove it, as needed.
-            this.товары_в_заказеTableAdapter.Fill(this.pharmacyDataSet.Товары_в_заказе);
+            // TODO: This line of code loads data into the 'pharmacyDataSet.Сотрудник' table. You can move, or remove it, as needed.
+            this.сотрудникTableAdapter.Fill(this.pharmacyDataSet.Сотрудник);
+            //// TODO: This line of code loads data into the 'pharmacyDataSet.Товары_в_заказе' table. You can move, or remove it, as needed.
+            //this.товары_в_заказеTableAdapter.Fill(this.pharmacyDataSet.Товары_в_заказе);
             // TODO: This line of code loads data into the 'pharmacyDataSet.Заказ' table. You can move, or remove it, as needed.
             this.заказTableAdapter.Fill(this.pharmacyDataSet.Заказ);
         }
@@ -46,13 +48,6 @@ namespace PharmacyDataBase
         {
             Show();
             Activate();
-        }
-
-        private void товары_в_заказеBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.товары_в_заказеBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.pharmacyDataSet);
         }
 
         private void FormOrderList_Load(object sender, EventArgs e)
@@ -76,6 +71,13 @@ namespace PharmacyDataBase
                 ((DataRowView)заказBindingSource.Current)["ID Сотрудника"] = id;
                 заказBindingSource.EndEdit();
             }
+        }
+
+        private void toolStripButtonSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.товары_в_заказеBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.pharmacyDataSet);
         }
     }
 }

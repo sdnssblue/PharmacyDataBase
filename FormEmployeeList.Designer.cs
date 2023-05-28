@@ -54,7 +54,6 @@ namespace PharmacyDataBase
             this.сотрудникBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButtonOK = new System.Windows.Forms.ToolStripButton();
             this.сотрудникDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +61,7 @@ namespace PharmacyDataBase
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ФИО = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingNavigator)).BeginInit();
@@ -272,14 +272,14 @@ namespace PharmacyDataBase
             this.сотрудникDataGridView.AutoGenerateColumns = false;
             this.сотрудникDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.сотрудникDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumnPol,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
-            this.dataGridViewCheckBoxColumn1});
+            this.dataGridViewCheckBoxColumn1,
+            this.ФИО});
             this.сотрудникDataGridView.DataSource = this.сотрудникBindingSource;
             this.сотрудникDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.сотрудникDataGridView.Location = new System.Drawing.Point(0, 25);
@@ -287,14 +287,6 @@ namespace PharmacyDataBase
             this.сотрудникDataGridView.Size = new System.Drawing.Size(843, 453);
             this.сотрудникDataGridView.TabIndex = 2;
             this.сотрудникDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.сотрудникDataGridView_CellFormatting);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID Сотрудника";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID Сотрудника";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -342,6 +334,13 @@ namespace PharmacyDataBase
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "Дети";
             this.dataGridViewCheckBoxColumn1.HeaderText = "Дети";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // ФИО
+            // 
+            this.ФИО.DataPropertyName = "ФИО";
+            this.ФИО.HeaderText = "ФИО";
+            this.ФИО.Name = "ФИО";
+            this.ФИО.ReadOnly = true;
             // 
             // FormEmployeeList
             // 
@@ -391,7 +390,6 @@ namespace PharmacyDataBase
         private System.Windows.Forms.BindingNavigator сотрудникBindingNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButtonOK;
         private System.Windows.Forms.DataGridView сотрудникDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
@@ -399,5 +397,6 @@ namespace PharmacyDataBase
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ФИО;
     }
 }

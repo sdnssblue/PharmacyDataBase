@@ -27,11 +27,8 @@ namespace PharmacyDataBase
 
         private void FormReport_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pharmacyDataSet.Товары_в_заказе' table. You can move, or remove it, as needed.
-            this.товары_в_заказеTableAdapter.Fill(this.pharmacyDataSet.Товары_в_заказе);
-            // TODO: This line of code loads data into the 'pharmacyDataSet.Отчет' table. You can move, or remove it, as needed.
-            //this.отчетTableAdapter.Fill(this.pharmacyDataSet.Отчет);
-
+        //TODO: This line of code loads data into the 'pharmacyDataSet.Отчет' table.You can move, or remove it, as needed.
+            this.отчетTableAdapter.Fill(this.pharmacyDataSet.Отчет);
         }
 
         private static FormReportList f;
@@ -48,14 +45,6 @@ namespace PharmacyDataBase
         {
             Show();
             Activate();
-        }
-
-        private void товары_в_заказеBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.товары_в_заказеBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.pharmacyDataSet);
-
         }
     }
 }

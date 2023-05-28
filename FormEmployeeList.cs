@@ -127,7 +127,7 @@ namespace PharmacyDataBase
             idCurrent = id;
             if (ShowDialog() == DialogResult.OK)
             {
-                return (int)((DataRowView)сотрудникBindingSource.Current)["ID Сотрудника"];
+                return (int)((DataRowView)сотрудникBindingSource.Current)["ID_Сотрудника"];
             }
             else { return -1; }
         }
