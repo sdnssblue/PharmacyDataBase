@@ -28,8 +28,8 @@ namespace PharmacyDataBase
         {
             // TODO: This line of code loads data into the 'pharmacyDataSet.Сотрудник' table. You can move, or remove it, as needed.
             this.сотрудникTableAdapter.Fill(this.pharmacyDataSet.Сотрудник);
-            //// TODO: This line of code loads data into the 'pharmacyDataSet.Товары_в_заказе' table. You can move, or remove it, as needed.
-            //this.товары_в_заказеTableAdapter.Fill(this.pharmacyDataSet.Товары_в_заказе);
+            // TODO: This line of code loads data into the 'pharmacyDataSet.Товары_в_заказе' table. You can move, or remove it, as needed.
+            this.товары_в_заказеTableAdapter.Fill(this.pharmacyDataSet.Товары_в_заказе);
             // TODO: This line of code loads data into the 'pharmacyDataSet.Заказ' table. You can move, or remove it, as needed.
             this.заказTableAdapter.Fill(this.pharmacyDataSet.Заказ);
         }
@@ -59,16 +59,16 @@ namespace PharmacyDataBase
         private void buttonEmployee_Click(object sender, EventArgs e)
         {
             int id = -1;
-            if (((DataRowView)заказBindingSource.Current)["ID Сотрудника"].ToString() !="")
+            if (((DataRowView)заказBindingSource.Current)["ID_Сотрудника"].ToString() !="")
             {
-                id = (int)(((DataRowView)заказBindingSource.Current)["ID Сотрудника"]);
+                id = (int)(((DataRowView)заказBindingSource.Current)["ID_Сотрудника"]);
             }
 
             id = FormEmployeeList.fw.ShowSelectForm(id);
             if (id >= 0)
             {
                 MessageBox.Show(id.ToString());
-                ((DataRowView)заказBindingSource.Current)["ID Сотрудника"] = id;
+                ((DataRowView)заказBindingSource.Current)["ID_Сотрудника"] = id;
                 заказBindingSource.EndEdit();
             }
         }

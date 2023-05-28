@@ -318,7 +318,7 @@ namespace PharmacyDataBase {
             this.Namespace = "http://tempuri.org/PharmacyDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableЗаказ = new ЗаказDataTable();
+            this.tableЗаказ = new ЗаказDataTable(false);
             base.Tables.Add(this.tableЗаказ);
             this.tableОтчет = new ОтчетDataTable();
             base.Tables.Add(this.tableОтчет);
@@ -434,6 +434,7 @@ namespace PharmacyDataBase {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitExpressions() {
+            this.Заказ.СотрудникColumn.Expression = "Parent(FK_Заказ_Сотрудник).ФИО";
             this.Сотрудник.ФИОColumn.Expression = "ID_Сотрудника+\' \'+Фамилия+\' \'+Имя+\' \'+Отчество";
             this.Товары_в_заказе.СтоимостьColumn.Expression = "Количество*Цена";
         }
@@ -468,12 +469,23 @@ namespace PharmacyDataBase {
             
             private global::System.Data.DataColumn columnID_Сотрудника;
             
+            private global::System.Data.DataColumn columnСотрудник;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ЗаказDataTable() {
+            public ЗаказDataTable() : 
+                    this(false) {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ЗаказDataTable(bool initExpressions) {
                 this.TableName = "Заказ";
                 this.BeginInit();
                 this.InitClass();
+                if ((initExpressions == true)) {
+                    this.InitExpressions();
+                }
                 this.EndInit();
             }
             
@@ -535,6 +547,14 @@ namespace PharmacyDataBase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn СотрудникColumn {
+                get {
+                    return this.columnСотрудник;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -570,12 +590,31 @@ namespace PharmacyDataBase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ЗаказRow AddЗаказRow(System.DateTime Дата_и_время, decimal Цена, СотрудникRow parentСотрудникRowByFK_Заказ_Сотрудник, string Сотрудник) {
+                ЗаказRow rowЗаказRow = ((ЗаказRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Дата_и_время,
+                        Цена,
+                        null,
+                        Сотрудник};
+                if ((parentСотрудникRowByFK_Заказ_Сотрудник != null)) {
+                    columnValuesArray[3] = parentСотрудникRowByFK_Заказ_Сотрудник[0];
+                }
+                rowЗаказRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowЗаказRow);
+                return rowЗаказRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ЗаказRow AddЗаказRow(System.DateTime Дата_и_время, decimal Цена, СотрудникRow parentСотрудникRowByFK_Заказ_Сотрудник) {
                 ЗаказRow rowЗаказRow = ((ЗаказRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Дата_и_время,
                         Цена,
+                        null,
                         null};
                 if ((parentСотрудникRowByFK_Заказ_Сотрудник != null)) {
                     columnValuesArray[3] = parentСотрудникRowByFK_Заказ_Сотрудник[0];
@@ -613,6 +652,7 @@ namespace PharmacyDataBase {
                 this.columnДата_и_время = base.Columns["Дата и время"];
                 this.columnЦена = base.Columns["Цена"];
                 this.columnID_Сотрудника = base.Columns["ID_Сотрудника"];
+                this.columnСотрудник = base.Columns["Сотрудник"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -626,6 +666,8 @@ namespace PharmacyDataBase {
                 base.Columns.Add(this.columnЦена);
                 this.columnID_Сотрудника = new global::System.Data.DataColumn("ID_Сотрудника", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Сотрудника);
+                this.columnСотрудник = new global::System.Data.DataColumn("Сотрудник", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnСотрудник);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Заказа}, true));
                 this.columnID_Заказа.AutoIncrement = true;
@@ -636,6 +678,7 @@ namespace PharmacyDataBase {
                 this.columnID_Заказа.Unique = true;
                 this.columnЦена.AllowDBNull = false;
                 this.columnID_Сотрудника.AllowDBNull = false;
+                this.columnСотрудник.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -654,6 +697,12 @@ namespace PharmacyDataBase {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(ЗаказRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitExpressions() {
+                this.СотрудникColumn.Expression = "Parent(FK_Заказ_Сотрудник).ФИО";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2241,6 +2290,22 @@ namespace PharmacyDataBase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Сотрудник {
+                get {
+                    try {
+                        return ((string)(this[this.tableЗаказ.СотрудникColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Сотрудник\' in table \'Заказ\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableЗаказ.СотрудникColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public СотрудникRow СотрудникRow {
                 get {
                     return ((СотрудникRow)(this.GetParentRow(this.Table.ParentRelations["FK_Заказ_Сотрудник"])));
@@ -2260,6 +2325,18 @@ namespace PharmacyDataBase {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetДата_и_времяNull() {
                 this[this.tableЗаказ.Дата_и_времяColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsСотрудникNull() {
+                return this.IsNull(this.tableЗаказ.СотрудникColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetСотрудникNull() {
+                this[this.tableЗаказ.СотрудникColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3094,7 +3171,7 @@ SELECT ID_Заказа, [Дата и время], Цена, ID_Сотрудни�
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual PharmacyDataSet.ЗаказDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PharmacyDataSet.ЗаказDataTable dataTable = new PharmacyDataSet.ЗаказDataTable();
+            PharmacyDataSet.ЗаказDataTable dataTable = new PharmacyDataSet.ЗаказDataTable(true);
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

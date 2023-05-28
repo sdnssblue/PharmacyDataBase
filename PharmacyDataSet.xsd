@@ -335,6 +335,7 @@ SELECT ID_Заказа, ID_Товара, Количество, Цена FROM [Т
               <xs:element name="Дата_x0020_и_x0020_время" msprop:Generator_ColumnVarNameInTable="columnДата_и_время" msprop:Generator_ColumnPropNameInRow="Дата_и_время" msprop:Generator_ColumnPropNameInTable="Дата_и_времяColumn" msprop:Generator_UserColumnName="Дата и время" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Цена" msprop:Generator_ColumnVarNameInTable="columnЦена" msprop:Generator_ColumnPropNameInRow="Цена" msprop:Generator_ColumnPropNameInTable="ЦенаColumn" msprop:Generator_UserColumnName="Цена" type="xs:decimal" />
               <xs:element name="ID_Сотрудника" msprop:Generator_ColumnVarNameInTable="columnID_Сотрудника" msprop:Generator_ColumnPropNameInRow="ID_Сотрудника" msprop:Generator_ColumnPropNameInTable="ID_СотрудникаColumn" msprop:Generator_UserColumnName="ID_Сотрудника" type="xs:int" />
+              <xs:element name="Сотрудник" msdata:ReadOnly="true" msdata:Expression="Parent(FK_Заказ_Сотрудник).ФИО" msprop:Generator_ColumnVarNameInTable="columnСотрудник" msprop:Generator_ColumnPropNameInRow="Сотрудник" msprop:Generator_ColumnPropNameInTable="СотрудникColumn" msprop:Generator_UserColumnName="Сотрудник" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

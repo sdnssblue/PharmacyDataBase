@@ -213,6 +213,15 @@
         dtINAGGiDUDGyGpoawAxeNSAQWkAORiqnRLAwAAA9EMMU8Daa3MAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="pharmacyDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="bindingNavigator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1271, 17</value>
+  </metadata>
+  <metadata name="товары_в_заказеBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>827, 17</value>
+  </metadata>
   <metadata name="товары_в_заказеBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>827, 17</value>
   </metadata>
@@ -288,6 +297,18 @@
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAExJREFUOE9joAr49u3bf1IxVCsEgAWC58Dxh/cf4RhZDETHTNiHaQgpBoAwzBCo
         dtINAGGiDUDGyGpoawAxeNSAQWkAORiqnRLAwAAA9EMMU8Daa3MAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="buttonEmployee.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE9SURBVFhH7dS7LoRRFMXxLwQFPc/gUvMYGo3E44iKEMKr
+        SAaNRE3wFCKupdt/JYqvWHP2MWeLxkp+ySQze+9v5pzZ3QhZwh5u8PpNr3exiF/LFA7xjs8h3nCASaRG
+        w8/ghjqnSH2II7hBJftIic689LMPo+NYQHN04dyAGjtozi1c8xrXaM4LXPMaz2iOmrjmNZ7QnD8/Am04
+        17zGNpqj9aq/lBtQopp5pETr1Q0p0d83LVqrJ3CDnAEmkBo9hNZr6Tj0nr55+vB+tF614XTDtSNEr3Xh
+        0s78P/3o7FewirVK+uwymu7CDLbwCHfhajxgE9P4UeZwBdd0FJeYRVXGcQHXqMU5xhBmA65BhnWE0RZz
+        xRmOEeYerjjDHcJ8wBVnUO8wrjBTGFeUKYwryhTGFWUK44oyhXFFmXrpui9+vvLDhnJ12AAAAABJRU5E
+        rkJggg==
 </value>
   </data>
   <metadata name="заказTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

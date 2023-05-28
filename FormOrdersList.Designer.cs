@@ -36,6 +36,8 @@ namespace PharmacyDataBase
             System.Windows.Forms.Label iD_СотрудникаLabel;
             System.Windows.Forms.Label сотрудникLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrdersList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.OrderBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.заказBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -51,14 +53,16 @@ namespace PharmacyDataBase
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.заказBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.iD_ЗаказаTextBox = new System.Windows.Forms.TextBox();
-            this.дата_и_времяDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.ценаTextBox = new System.Windows.Forms.TextBox();
-            this.iD_СотрудникаTextBox = new System.Windows.Forms.TextBox();
             this.groupBoxItemsInOrder = new System.Windows.Forms.GroupBox();
+            this.товары_в_заказеDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.товары_в_заказеBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButtonAddItem = new System.Windows.Forms.ToolStripButton();
-            this.товары_в_заказеBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripLabelCountItem = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButtonDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -76,13 +80,11 @@ namespace PharmacyDataBase
             this.товары_в_заказеTableAdapter = new PharmacyDataBase.PharmacyDataSetTableAdapters.Товары_в_заказеTableAdapter();
             this.сотрудникBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.сотрудникTableAdapter = new PharmacyDataBase.PharmacyDataSetTableAdapters.СотрудникTableAdapter();
+            this.iD_ЗаказаTextBox = new System.Windows.Forms.TextBox();
+            this.дата_и_времяDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.ценаTextBox = new System.Windows.Forms.TextBox();
+            this.iD_СотрудникаTextBox = new System.Windows.Forms.TextBox();
             this.сотрудникLabel1 = new System.Windows.Forms.Label();
-            this.товары_в_заказеDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             iD_ЗаказаLabel = new System.Windows.Forms.Label();
             дата_и_времяLabel = new System.Windows.Forms.Label();
             ценаLabel = new System.Windows.Forms.Label();
@@ -93,53 +95,53 @@ namespace PharmacyDataBase
             ((System.ComponentModel.ISupportInitialize)(this.заказBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet)).BeginInit();
             this.groupBoxItemsInOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // iD_ЗаказаLabel
             // 
             iD_ЗаказаLabel.AutoSize = true;
-            iD_ЗаказаLabel.Location = new System.Drawing.Point(12, 29);
+            iD_ЗаказаLabel.Location = new System.Drawing.Point(17, 39);
             iD_ЗаказаLabel.Name = "iD_ЗаказаLabel";
             iD_ЗаказаLabel.Size = new System.Drawing.Size(61, 13);
-            iD_ЗаказаLabel.TabIndex = 1;
+            iD_ЗаказаLabel.TabIndex = 14;
             iD_ЗаказаLabel.Text = "ID Заказа:";
             // 
             // дата_и_времяLabel
             // 
             дата_и_времяLabel.AutoSize = true;
-            дата_и_времяLabel.Location = new System.Drawing.Point(12, 55);
+            дата_и_времяLabel.Location = new System.Drawing.Point(17, 66);
             дата_и_времяLabel.Name = "дата_и_времяLabel";
             дата_и_времяLabel.Size = new System.Drawing.Size(80, 13);
-            дата_и_времяLabel.TabIndex = 3;
+            дата_и_времяLabel.TabIndex = 16;
             дата_и_времяLabel.Text = "Дата и время:";
             // 
             // ценаLabel
             // 
             ценаLabel.AutoSize = true;
-            ценаLabel.Location = new System.Drawing.Point(12, 81);
+            ценаLabel.Location = new System.Drawing.Point(17, 91);
             ценаLabel.Name = "ценаLabel";
             ценаLabel.Size = new System.Drawing.Size(36, 13);
-            ценаLabel.TabIndex = 5;
+            ценаLabel.TabIndex = 18;
             ценаLabel.Text = "Цена:";
             // 
             // iD_СотрудникаLabel
             // 
             iD_СотрудникаLabel.AutoSize = true;
-            iD_СотрудникаLabel.Location = new System.Drawing.Point(12, 107);
+            iD_СотрудникаLabel.Location = new System.Drawing.Point(17, 117);
             iD_СотрудникаLabel.Name = "iD_СотрудникаLabel";
             iD_СотрудникаLabel.Size = new System.Drawing.Size(83, 13);
-            iD_СотрудникаLabel.TabIndex = 7;
+            iD_СотрудникаLabel.TabIndex = 20;
             iD_СотрудникаLabel.Text = "ID Сотрудника:";
             // 
             // сотрудникLabel
             // 
             сотрудникLabel.AutoSize = true;
-            сотрудникLabel.Location = new System.Drawing.Point(15, 141);
+            сотрудникLabel.Location = new System.Drawing.Point(17, 151);
             сотрудникLabel.Name = "сотрудникLabel";
             сотрудникLabel.Size = new System.Drawing.Size(63, 13);
             сотрудникLabel.TabIndex = 13;
@@ -281,38 +283,6 @@ namespace PharmacyDataBase
             this.заказBindingNavigatorSaveItem.Text = "Сохранить";
             this.заказBindingNavigatorSaveItem.Click += new System.EventHandler(this.заказBindingNavigatorSaveItem_Click);
             // 
-            // iD_ЗаказаTextBox
-            // 
-            this.iD_ЗаказаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.заказBindingSource, "ID Заказа", true));
-            this.iD_ЗаказаTextBox.Location = new System.Drawing.Point(101, 29);
-            this.iD_ЗаказаTextBox.Name = "iD_ЗаказаTextBox";
-            this.iD_ЗаказаTextBox.Size = new System.Drawing.Size(468, 20);
-            this.iD_ЗаказаTextBox.TabIndex = 2;
-            // 
-            // дата_и_времяDateTimePicker
-            // 
-            this.дата_и_времяDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.заказBindingSource, "Дата и время", true));
-            this.дата_и_времяDateTimePicker.Location = new System.Drawing.Point(101, 55);
-            this.дата_и_времяDateTimePicker.Name = "дата_и_времяDateTimePicker";
-            this.дата_и_времяDateTimePicker.Size = new System.Drawing.Size(468, 20);
-            this.дата_и_времяDateTimePicker.TabIndex = 4;
-            // 
-            // ценаTextBox
-            // 
-            this.ценаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.заказBindingSource, "Цена", true));
-            this.ценаTextBox.Location = new System.Drawing.Point(101, 81);
-            this.ценаTextBox.Name = "ценаTextBox";
-            this.ценаTextBox.Size = new System.Drawing.Size(468, 20);
-            this.ценаTextBox.TabIndex = 6;
-            // 
-            // iD_СотрудникаTextBox
-            // 
-            this.iD_СотрудникаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.заказBindingSource, "ID Сотрудника", true));
-            this.iD_СотрудникаTextBox.Location = new System.Drawing.Point(101, 107);
-            this.iD_СотрудникаTextBox.Name = "iD_СотрудникаTextBox";
-            this.iD_СотрудникаTextBox.Size = new System.Drawing.Size(468, 20);
-            this.iD_СотрудникаTextBox.TabIndex = 8;
-            // 
             // groupBoxItemsInOrder
             // 
             this.groupBoxItemsInOrder.Controls.Add(this.товары_в_заказеDataGridView);
@@ -323,6 +293,65 @@ namespace PharmacyDataBase
             this.groupBoxItemsInOrder.TabIndex = 9;
             this.groupBoxItemsInOrder.TabStop = false;
             this.groupBoxItemsInOrder.Text = "Товары в заказе";
+            // 
+            // товары_в_заказеDataGridView
+            // 
+            this.товары_в_заказеDataGridView.AutoGenerateColumns = false;
+            this.товары_в_заказеDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.товары_в_заказеDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.товары_в_заказеDataGridView.DataSource = this.товары_в_заказеBindingSource;
+            this.товары_в_заказеDataGridView.Location = new System.Drawing.Point(3, 44);
+            this.товары_в_заказеDataGridView.Name = "товары_в_заказеDataGridView";
+            this.товары_в_заказеDataGridView.Size = new System.Drawing.Size(545, 231);
+            this.товары_в_заказеDataGridView.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ID_Заказа";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ID_Заказа";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ID_Товара";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ID_Товара";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Количество";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Количество";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Цена";
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Цена";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Стоимость";
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Стоимость";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // товары_в_заказеBindingSource
+            // 
+            this.товары_в_заказеBindingSource.AllowNew = true;
+            this.товары_в_заказеBindingSource.DataMember = "FK_Товары в заказе_Заказ";
+            this.товары_в_заказеBindingSource.DataSource = this.заказBindingSource;
             // 
             // bindingNavigator1
             // 
@@ -363,11 +392,6 @@ namespace PharmacyDataBase
             this.toolStripButtonAddItem.RightToLeftAutoMirrorImage = true;
             this.toolStripButtonAddItem.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonAddItem.Text = "Добавить запись";
-            // 
-            // товары_в_заказеBindingSource
-            // 
-            this.товары_в_заказеBindingSource.DataMember = "FK_Товары в заказе_Заказ";
-            this.товары_в_заказеBindingSource.DataSource = this.заказBindingSource;
             // 
             // toolStripLabelCountItem
             // 
@@ -457,9 +481,9 @@ namespace PharmacyDataBase
             // 
             // buttonEmployee
             // 
-            this.buttonEmployee.Image = global::PharmacyDataBase.Properties.Resources.employee_icon;
+            this.buttonEmployee.Image = ((System.Drawing.Image)(resources.GetObject("buttonEmployee.Image")));
             this.buttonEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEmployee.Location = new System.Drawing.Point(586, 81);
+            this.buttonEmployee.Location = new System.Drawing.Point(584, 88);
             this.buttonEmployee.Name = "buttonEmployee";
             this.buttonEmployee.Size = new System.Drawing.Size(154, 46);
             this.buttonEmployee.TabIndex = 10;
@@ -494,72 +518,53 @@ namespace PharmacyDataBase
             // 
             this.сотрудникTableAdapter.ClearBeforeFill = true;
             // 
+            // iD_ЗаказаTextBox
+            // 
+            this.iD_ЗаказаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.заказBindingSource, "ID_Заказа", true));
+            this.iD_ЗаказаTextBox.Location = new System.Drawing.Point(106, 36);
+            this.iD_ЗаказаTextBox.Name = "iD_ЗаказаTextBox";
+            this.iD_ЗаказаTextBox.Size = new System.Drawing.Size(460, 20);
+            this.iD_ЗаказаTextBox.TabIndex = 15;
+            // 
+            // дата_и_времяDateTimePicker
+            // 
+            this.дата_и_времяDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.заказBindingSource, "Дата и время", true));
+            this.дата_и_времяDateTimePicker.Location = new System.Drawing.Point(106, 62);
+            this.дата_и_времяDateTimePicker.Name = "дата_и_времяDateTimePicker";
+            this.дата_и_времяDateTimePicker.Size = new System.Drawing.Size(460, 20);
+            this.дата_и_времяDateTimePicker.TabIndex = 17;
+            // 
+            // ценаTextBox
+            // 
+            this.ценаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.заказBindingSource, "Цена", true));
+            this.ценаTextBox.Location = new System.Drawing.Point(106, 88);
+            this.ценаTextBox.Name = "ценаTextBox";
+            this.ценаTextBox.Size = new System.Drawing.Size(460, 20);
+            this.ценаTextBox.TabIndex = 19;
+            // 
+            // iD_СотрудникаTextBox
+            // 
+            this.iD_СотрудникаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.заказBindingSource, "ID_Сотрудника", true));
+            this.iD_СотрудникаTextBox.Location = new System.Drawing.Point(106, 114);
+            this.iD_СотрудникаTextBox.Name = "iD_СотрудникаTextBox";
+            this.iD_СотрудникаTextBox.Size = new System.Drawing.Size(460, 20);
+            this.iD_СотрудникаTextBox.TabIndex = 21;
+            // 
             // сотрудникLabel1
             // 
             this.сотрудникLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.заказBindingSource, "Сотрудник", true));
             this.сотрудникLabel1.ForeColor = System.Drawing.Color.DarkRed;
-            this.сотрудникLabel1.Location = new System.Drawing.Point(98, 141);
+            this.сотрудникLabel1.Location = new System.Drawing.Point(106, 151);
             this.сотрудникLabel1.Name = "сотрудникLabel1";
-            this.сотрудникLabel1.Size = new System.Drawing.Size(100, 23);
+            this.сотрудникLabel1.Size = new System.Drawing.Size(457, 23);
             this.сотрудникLabel1.TabIndex = 14;
-            this.сотрудникLabel1.Text = "label1";
-            // 
-            // товары_в_заказеDataGridView
-            // 
-            this.товары_в_заказеDataGridView.AutoGenerateColumns = false;
-            this.товары_в_заказеDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.товары_в_заказеDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            this.товары_в_заказеDataGridView.DataSource = this.товары_в_заказеBindingSource;
-            this.товары_в_заказеDataGridView.Location = new System.Drawing.Point(3, 44);
-            this.товары_в_заказеDataGridView.Name = "товары_в_заказеDataGridView";
-            this.товары_в_заказеDataGridView.Size = new System.Drawing.Size(545, 231);
-            this.товары_в_заказеDataGridView.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ID_Заказа";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ID_Заказа";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "ID_Товара";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ID_Товара";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Количество";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Количество";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Цена";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Цена";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Стоимость";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Стоимость";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.сотрудникLabel1.Text = "ID Фамилия Имя Отчество";
             // 
             // FormOrdersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 505);
-            this.Controls.Add(сотрудникLabel);
-            this.Controls.Add(this.сотрудникLabel1);
-            this.Controls.Add(this.buttonEmployee);
-            this.Controls.Add(this.groupBoxItemsInOrder);
+            this.ClientSize = new System.Drawing.Size(801, 507);
             this.Controls.Add(iD_ЗаказаLabel);
             this.Controls.Add(this.iD_ЗаказаTextBox);
             this.Controls.Add(дата_и_времяLabel);
@@ -568,6 +573,10 @@ namespace PharmacyDataBase
             this.Controls.Add(this.ценаTextBox);
             this.Controls.Add(iD_СотрудникаLabel);
             this.Controls.Add(this.iD_СотрудникаTextBox);
+            this.Controls.Add(сотрудникLabel);
+            this.Controls.Add(this.сотрудникLabel1);
+            this.Controls.Add(this.buttonEmployee);
+            this.Controls.Add(this.groupBoxItemsInOrder);
             this.Controls.Add(this.OrderBindingNavigator);
             this.Name = "FormOrdersList";
             this.ShowIcon = false;
@@ -580,12 +589,12 @@ namespace PharmacyDataBase
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet)).EndInit();
             this.groupBoxItemsInOrder.ResumeLayout(false);
             this.groupBoxItemsInOrder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.товары_в_заказеDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -610,10 +619,6 @@ namespace PharmacyDataBase
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton заказBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox iD_ЗаказаTextBox;
-        private System.Windows.Forms.DateTimePicker дата_и_времяDateTimePicker;
-        private System.Windows.Forms.TextBox ценаTextBox;
-        private System.Windows.Forms.TextBox iD_СотрудникаTextBox;
         private System.Windows.Forms.GroupBox groupBoxItemsInOrder;
         private System.Windows.Forms.BindingSource товары_в_заказеBindingSource;
         private PharmacyDataSetTableAdapters.Товары_в_заказеTableAdapter товары_в_заказеTableAdapter;
@@ -633,8 +638,12 @@ namespace PharmacyDataBase
         private System.Windows.Forms.ToolStripButton toolStripButtonSaveItem;
         private System.Windows.Forms.BindingSource сотрудникBindingSource;
         private PharmacyDataSetTableAdapters.СотрудникTableAdapter сотрудникTableAdapter;
-        private System.Windows.Forms.Label сотрудникLabel1;
         private System.Windows.Forms.DataGridView товары_в_заказеDataGridView;
+        private System.Windows.Forms.TextBox iD_ЗаказаTextBox;
+        private System.Windows.Forms.DateTimePicker дата_и_времяDateTimePicker;
+        private System.Windows.Forms.TextBox ценаTextBox;
+        private System.Windows.Forms.TextBox iD_СотрудникаTextBox;
+        private System.Windows.Forms.Label сотрудникLabel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;

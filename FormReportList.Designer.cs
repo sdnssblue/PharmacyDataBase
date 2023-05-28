@@ -30,12 +30,12 @@ namespace PharmacyDataBase
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label iD_СотрудникаLabel;
-            System.Windows.Forms.Label количествоLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReportList));
             System.Windows.Forms.Label iD_ОтчетаLabel;
             System.Windows.Forms.Label датаLabel;
             System.Windows.Forms.Label выручкаLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReportList));
+            System.Windows.Forms.Label количествоLabel;
+            System.Windows.Forms.Label iD_СотрудникаLabel;
             this.отчетBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pharmacyDataSet = new PharmacyDataBase.PharmacyDataSet();
             this.отчетTableAdapter = new PharmacyDataBase.PharmacyDataSetTableAdapters.ОтчетTableAdapter();
@@ -53,66 +53,23 @@ namespace PharmacyDataBase
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.отчетBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.отчетBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.iD_СотрудникаTextBox = new System.Windows.Forms.TextBox();
-            this.количествоTextBox = new System.Windows.Forms.TextBox();
-            this.выручкаTextBox = new System.Windows.Forms.TextBox();
-            this.датаDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.отчетBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.iD_ОтчетаTextBox = new System.Windows.Forms.TextBox();
-            iD_СотрудникаLabel = new System.Windows.Forms.Label();
-            количествоLabel = new System.Windows.Forms.Label();
+            this.датаDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.выручкаTextBox = new System.Windows.Forms.TextBox();
+            this.количествоTextBox = new System.Windows.Forms.TextBox();
+            this.iD_СотрудникаTextBox = new System.Windows.Forms.TextBox();
             iD_ОтчетаLabel = new System.Windows.Forms.Label();
             датаLabel = new System.Windows.Forms.Label();
             выручкаLabel = new System.Windows.Forms.Label();
+            количествоLabel = new System.Windows.Forms.Label();
+            iD_СотрудникаLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.отчетBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.отчетBindingNavigator)).BeginInit();
             this.отчетBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.отчетBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // iD_СотрудникаLabel
-            // 
-            iD_СотрудникаLabel.AutoSize = true;
-            iD_СотрудникаLabel.Location = new System.Drawing.Point(12, 129);
-            iD_СотрудникаLabel.Name = "iD_СотрудникаLabel";
-            iD_СотрудникаLabel.Size = new System.Drawing.Size(83, 13);
-            iD_СотрудникаLabel.TabIndex = 9;
-            iD_СотрудникаLabel.Text = "ID Сотрудника:";
-            // 
-            // количествоLabel
-            // 
-            количествоLabel.AutoSize = true;
-            количествоLabel.Location = new System.Drawing.Point(12, 103);
-            количествоLabel.Name = "количествоLabel";
-            количествоLabel.Size = new System.Drawing.Size(69, 13);
-            количествоLabel.TabIndex = 7;
-            количествоLabel.Text = "Количество:";
-            // 
-            // iD_ОтчетаLabel
-            // 
-            iD_ОтчетаLabel.AutoSize = true;
-            iD_ОтчетаLabel.Location = new System.Drawing.Point(12, 25);
-            iD_ОтчетаLabel.Name = "iD_ОтчетаLabel";
-            iD_ОтчетаLabel.Size = new System.Drawing.Size(59, 13);
-            iD_ОтчетаLabel.TabIndex = 1;
-            iD_ОтчетаLabel.Text = "ID Отчета:";
-            // 
-            // датаLabel
-            // 
-            датаLabel.AutoSize = true;
-            датаLabel.Location = new System.Drawing.Point(12, 52);
-            датаLabel.Name = "датаLabel";
-            датаLabel.Size = new System.Drawing.Size(36, 13);
-            датаLabel.TabIndex = 3;
-            датаLabel.Text = "Дата:";
-            // 
-            // выручкаLabel
-            // 
-            выручкаLabel.AutoSize = true;
-            выручкаLabel.Location = new System.Drawing.Point(12, 77);
-            выручкаLabel.Name = "выручкаLabel";
-            выручкаLabel.Size = new System.Drawing.Size(53, 13);
-            выручкаLabel.TabIndex = 5;
-            выручкаLabel.Text = "Выручка:";
             // 
             // отчетBindingSource
             // 
@@ -259,55 +216,105 @@ namespace PharmacyDataBase
             this.отчетBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.отчетBindingNavigator.Name = "отчетBindingNavigator";
             this.отчетBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.отчетBindingNavigator.Size = new System.Drawing.Size(312, 25);
+            this.отчетBindingNavigator.Size = new System.Drawing.Size(314, 25);
             this.отчетBindingNavigator.TabIndex = 0;
             this.отчетBindingNavigator.Text = "bindingNavigator1";
             // 
-            // iD_СотрудникаTextBox
+            // отчетBindingSource1
             // 
-            this.iD_СотрудникаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.отчетBindingSource, "ID Сотрудника", true));
-            this.iD_СотрудникаTextBox.Location = new System.Drawing.Point(101, 126);
-            this.iD_СотрудникаTextBox.Name = "iD_СотрудникаTextBox";
-            this.iD_СотрудникаTextBox.Size = new System.Drawing.Size(200, 20);
-            this.iD_СотрудникаTextBox.TabIndex = 10;
+            this.отчетBindingSource1.DataMember = "Отчет";
+            this.отчетBindingSource1.DataSource = this.pharmacyDataSet;
             // 
-            // количествоTextBox
+            // iD_ОтчетаLabel
             // 
-            this.количествоTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.отчетBindingSource, "Количество", true));
-            this.количествоTextBox.Location = new System.Drawing.Point(101, 100);
-            this.количествоTextBox.Name = "количествоTextBox";
-            this.количествоTextBox.Size = new System.Drawing.Size(200, 20);
-            this.количествоTextBox.TabIndex = 8;
+            iD_ОтчетаLabel.AutoSize = true;
+            iD_ОтчетаLabel.Location = new System.Drawing.Point(12, 36);
+            iD_ОтчетаLabel.Name = "iD_ОтчетаLabel";
+            iD_ОтчетаLabel.Size = new System.Drawing.Size(59, 13);
+            iD_ОтчетаLabel.TabIndex = 1;
+            iD_ОтчетаLabel.Text = "ID Отчета:";
             // 
-            // выручкаTextBox
+            // iD_ОтчетаTextBox
             // 
-            this.выручкаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.отчетBindingSource, "Выручка", true));
-            this.выручкаTextBox.Location = new System.Drawing.Point(101, 74);
-            this.выручкаTextBox.Name = "выручкаTextBox";
-            this.выручкаTextBox.Size = new System.Drawing.Size(200, 20);
-            this.выручкаTextBox.TabIndex = 6;
+            this.iD_ОтчетаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.отчетBindingSource1, "ID_Отчета", true));
+            this.iD_ОтчетаTextBox.Location = new System.Drawing.Point(101, 33);
+            this.iD_ОтчетаTextBox.Name = "iD_ОтчетаTextBox";
+            this.iD_ОтчетаTextBox.Size = new System.Drawing.Size(200, 20);
+            this.iD_ОтчетаTextBox.TabIndex = 2;
+            // 
+            // датаLabel
+            // 
+            датаLabel.AutoSize = true;
+            датаLabel.Location = new System.Drawing.Point(12, 63);
+            датаLabel.Name = "датаLabel";
+            датаLabel.Size = new System.Drawing.Size(36, 13);
+            датаLabel.TabIndex = 3;
+            датаLabel.Text = "Дата:";
             // 
             // датаDateTimePicker
             // 
-            this.датаDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.отчетBindingSource, "Дата", true));
-            this.датаDateTimePicker.Location = new System.Drawing.Point(101, 48);
+            this.датаDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.отчетBindingSource1, "Дата", true));
+            this.датаDateTimePicker.Location = new System.Drawing.Point(101, 59);
             this.датаDateTimePicker.Name = "датаDateTimePicker";
             this.датаDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.датаDateTimePicker.TabIndex = 4;
             // 
-            // iD_ОтчетаTextBox
+            // выручкаLabel
             // 
-            this.iD_ОтчетаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.отчетBindingSource, "ID Отчета", true));
-            this.iD_ОтчетаTextBox.Location = new System.Drawing.Point(101, 22);
-            this.iD_ОтчетаTextBox.Name = "iD_ОтчетаTextBox";
-            this.iD_ОтчетаTextBox.Size = new System.Drawing.Size(200, 20);
-            this.iD_ОтчетаTextBox.TabIndex = 2;
+            выручкаLabel.AutoSize = true;
+            выручкаLabel.Location = new System.Drawing.Point(12, 88);
+            выручкаLabel.Name = "выручкаLabel";
+            выручкаLabel.Size = new System.Drawing.Size(53, 13);
+            выручкаLabel.TabIndex = 5;
+            выручкаLabel.Text = "Выручка:";
+            // 
+            // выручкаTextBox
+            // 
+            this.выручкаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.отчетBindingSource1, "Выручка", true));
+            this.выручкаTextBox.Location = new System.Drawing.Point(101, 85);
+            this.выручкаTextBox.Name = "выручкаTextBox";
+            this.выручкаTextBox.Size = new System.Drawing.Size(200, 20);
+            this.выручкаTextBox.TabIndex = 6;
+            // 
+            // количествоLabel
+            // 
+            количествоLabel.AutoSize = true;
+            количествоLabel.Location = new System.Drawing.Point(12, 114);
+            количествоLabel.Name = "количествоLabel";
+            количествоLabel.Size = new System.Drawing.Size(69, 13);
+            количествоLabel.TabIndex = 7;
+            количествоLabel.Text = "Количество:";
+            // 
+            // количествоTextBox
+            // 
+            this.количествоTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.отчетBindingSource1, "Количество", true));
+            this.количествоTextBox.Location = new System.Drawing.Point(101, 111);
+            this.количествоTextBox.Name = "количествоTextBox";
+            this.количествоTextBox.Size = new System.Drawing.Size(200, 20);
+            this.количествоTextBox.TabIndex = 8;
+            // 
+            // iD_СотрудникаLabel
+            // 
+            iD_СотрудникаLabel.AutoSize = true;
+            iD_СотрудникаLabel.Location = new System.Drawing.Point(12, 140);
+            iD_СотрудникаLabel.Name = "iD_СотрудникаLabel";
+            iD_СотрудникаLabel.Size = new System.Drawing.Size(83, 13);
+            iD_СотрудникаLabel.TabIndex = 9;
+            iD_СотрудникаLabel.Text = "ID Сотрудника:";
+            // 
+            // iD_СотрудникаTextBox
+            // 
+            this.iD_СотрудникаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.отчетBindingSource1, "ID_Сотрудника", true));
+            this.iD_СотрудникаTextBox.Location = new System.Drawing.Point(101, 137);
+            this.iD_СотрудникаTextBox.Name = "iD_СотрудникаTextBox";
+            this.iD_СотрудникаTextBox.Size = new System.Drawing.Size(200, 20);
+            this.iD_СотрудникаTextBox.TabIndex = 10;
             // 
             // FormReportList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 156);
+            this.ClientSize = new System.Drawing.Size(314, 175);
             this.Controls.Add(iD_ОтчетаLabel);
             this.Controls.Add(this.iD_ОтчетаTextBox);
             this.Controls.Add(датаLabel);
@@ -328,6 +335,7 @@ namespace PharmacyDataBase
             ((System.ComponentModel.ISupportInitialize)(this.отчетBindingNavigator)).EndInit();
             this.отчетBindingNavigator.ResumeLayout(false);
             this.отчетBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.отчетBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,10 +360,11 @@ namespace PharmacyDataBase
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton отчетBindingNavigatorSaveItem;
         private System.Windows.Forms.BindingNavigator отчетBindingNavigator;
-        private System.Windows.Forms.TextBox iD_СотрудникаTextBox;
-        private System.Windows.Forms.TextBox количествоTextBox;
-        private System.Windows.Forms.TextBox выручкаTextBox;
-        private System.Windows.Forms.DateTimePicker датаDateTimePicker;
+        private System.Windows.Forms.BindingSource отчетBindingSource1;
         private System.Windows.Forms.TextBox iD_ОтчетаTextBox;
+        private System.Windows.Forms.DateTimePicker датаDateTimePicker;
+        private System.Windows.Forms.TextBox выручкаTextBox;
+        private System.Windows.Forms.TextBox количествоTextBox;
+        private System.Windows.Forms.TextBox iD_СотрудникаTextBox;
     }
 }

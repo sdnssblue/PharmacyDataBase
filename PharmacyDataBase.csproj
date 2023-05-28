@@ -102,14 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="PharmacyDataSet.xsc">
       <DependentUpon>PharmacyDataSet.xsd</DependentUpon>
     </None>
@@ -125,6 +120,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -135,28 +135,33 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drug_icon.png" />
+    <None Include="Resources\Interface\drug_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\employee_icon.png" />
+    <None Include="Resources\Interface\employee_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\exit_icon.png" />
+    <None Include="Resources\Interface\exit_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\info_icon.png" />
+    <None Include="Resources\Interface\info_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\report.png" />
+    <None Include="Resources\Interface\report.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\order.png" />
+    <None Include="Resources\Interface\order.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\itemsorder.png" />
+    <None Include="Resources\Interface\findButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\findButton.png" />
+    <Content Include="Resources\ItemPictures\anaferon.jpg" />
+    <Content Include="Resources\ItemPictures\analgin.jpg" />
+    <Content Include="Resources\ItemPictures\arbidol_max.jpg" />
+    <Content Include="Resources\ItemPictures\furacilin.jpg" />
+    <Content Include="Resources\ItemPictures\paracetamol-500-mg.jpg" />
+    <Content Include="Resources\ItemPictures\paracetamol.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
