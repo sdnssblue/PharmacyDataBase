@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.MenuStripMain = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.InfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.ManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemItems = new System.Windows.Forms.ToolStripMenuItem();
             this.EmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.документыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ContextMenuStripMain = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -53,6 +54,7 @@
             this.ToolStripButtonEmployee = new System.Windows.Forms.ToolStripButton();
             this.ToolStripButtonReport = new System.Windows.Forms.ToolStripButton();
             this.ToolStripButtonOrder = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButtonRequest = new System.Windows.Forms.ToolStripButton();
             this.MenuStripMain.SuspendLayout();
             this.ContextMenuStripMain.SuspendLayout();
             this.ToolStripMain.SuspendLayout();
@@ -64,7 +66,7 @@
             this.MenuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem,
             this.ManualToolStripMenuItem,
-            this.документыToolStripMenuItem});
+            this.DocumentsToolStripMenuItem});
             this.MenuStripMain.Location = new System.Drawing.Point(0, 0);
             this.MenuStripMain.Name = "MenuStripMain";
             this.MenuStripMain.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -75,72 +77,72 @@
             // FileToolStripMenuItem
             // 
             this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ExitToolStripMenuItem,
-            this.InfoToolStripMenuItem});
+            this.ToolStripMenuItemExit,
+            this.ToolStripMenuItemInfo});
             this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
             this.FileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.FileToolStripMenuItem.Text = "Файл";
             // 
-            // ExitToolStripMenuItem
+            // ToolStripMenuItemExit
             // 
-            this.ExitToolStripMenuItem.Image = global::PharmacyDataBase.Properties.Resources.exit_icon;
-            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.ExitToolStripMenuItem.Text = "Выход";
-            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            this.ToolStripMenuItemExit.Image = global::PharmacyDataBase.Properties.Resources.exit_icon;
+            this.ToolStripMenuItemExit.Name = "ToolStripMenuItemExit";
+            this.ToolStripMenuItemExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.ToolStripMenuItemExit.Size = new System.Drawing.Size(182, 22);
+            this.ToolStripMenuItemExit.Text = "Выход";
+            this.ToolStripMenuItemExit.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
-            // InfoToolStripMenuItem
+            // ToolStripMenuItemInfo
             // 
-            this.InfoToolStripMenuItem.Image = global::PharmacyDataBase.Properties.Resources.info_icon;
-            this.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem";
-            this.InfoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.I)));
-            this.InfoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.InfoToolStripMenuItem.Text = "О программе";
-            this.InfoToolStripMenuItem.Click += new System.EventHandler(this.InfoToolStripMenuItem_Click);
+            this.ToolStripMenuItemInfo.Image = global::PharmacyDataBase.Properties.Resources.info_icon;
+            this.ToolStripMenuItemInfo.Name = "ToolStripMenuItemInfo";
+            this.ToolStripMenuItemInfo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.I)));
+            this.ToolStripMenuItemInfo.Size = new System.Drawing.Size(182, 22);
+            this.ToolStripMenuItemInfo.Text = "О программе";
+            this.ToolStripMenuItemInfo.Click += new System.EventHandler(this.InfoToolStripMenuItem_Click);
             // 
             // ManualToolStripMenuItem
             // 
             this.ManualToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ItemsToolStripMenuItem,
+            this.ToolStripMenuItemItems,
             this.EmployeeToolStripMenuItem});
             this.ManualToolStripMenuItem.Name = "ManualToolStripMenuItem";
             this.ManualToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.ManualToolStripMenuItem.Text = "Справочники";
             // 
-            // ItemsToolStripMenuItem
+            // ToolStripMenuItemItems
             // 
-            this.ItemsToolStripMenuItem.Image = global::PharmacyDataBase.Properties.Resources.drug_icon;
-            this.ItemsToolStripMenuItem.Name = "ItemsToolStripMenuItem";
-            this.ItemsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D)));
-            this.ItemsToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.ItemsToolStripMenuItem.Text = "Товары";
-            this.ItemsToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            this.ToolStripMenuItemItems.Image = global::PharmacyDataBase.Properties.Resources.drug_icon;
+            this.ToolStripMenuItemItems.Name = "ToolStripMenuItemItems";
+            this.ToolStripMenuItemItems.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D)));
+            this.ToolStripMenuItemItems.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemItems.Text = "Товары";
+            this.ToolStripMenuItemItems.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
             // 
             // EmployeeToolStripMenuItem
             // 
             this.EmployeeToolStripMenuItem.Image = global::PharmacyDataBase.Properties.Resources.employee_icon;
             this.EmployeeToolStripMenuItem.Name = "EmployeeToolStripMenuItem";
             this.EmployeeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
-            this.EmployeeToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.EmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.EmployeeToolStripMenuItem.Text = "Сотрудники";
             this.EmployeeToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuEmployee_Click);
             // 
-            // документыToolStripMenuItem
+            // DocumentsToolStripMenuItem
             // 
-            this.документыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DocumentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OrdersToolStripMenuItem,
             this.ReportsToolStripMenuItem});
-            this.документыToolStripMenuItem.Name = "документыToolStripMenuItem";
-            this.документыToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.документыToolStripMenuItem.Text = "Документы";
+            this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
+            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.DocumentsToolStripMenuItem.Text = "Документы";
             // 
             // OrdersToolStripMenuItem
             // 
             this.OrdersToolStripMenuItem.Image = global::PharmacyDataBase.Properties.Resources.order;
             this.OrdersToolStripMenuItem.Name = "OrdersToolStripMenuItem";
             this.OrdersToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
-            this.OrdersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.OrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.OrdersToolStripMenuItem.Text = "Заказы";
             this.OrdersToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuOrder_Click);
             // 
@@ -149,7 +151,7 @@
             this.ReportsToolStripMenuItem.Image = global::PharmacyDataBase.Properties.Resources.report;
             this.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem";
             this.ReportsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.ReportsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ReportsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ReportsToolStripMenuItem.Text = "Отчеты";
             this.ReportsToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuReport_Click);
             // 
@@ -217,7 +219,8 @@
             this.ToolStripButtonItem,
             this.ToolStripButtonEmployee,
             this.ToolStripButtonReport,
-            this.ToolStripButtonOrder});
+            this.ToolStripButtonOrder,
+            this.ToolStripButtonRequest});
             this.ToolStripMain.Location = new System.Drawing.Point(0, 24);
             this.ToolStripMain.Name = "ToolStripMain";
             this.ToolStripMain.Size = new System.Drawing.Size(686, 25);
@@ -231,7 +234,7 @@
             this.ToolStripButtonExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButtonExit.Name = "ToolStripButtonExit";
             this.ToolStripButtonExit.Size = new System.Drawing.Size(23, 22);
-            this.ToolStripButtonExit.Text = "toolStripButton1";
+            this.ToolStripButtonExit.Text = "Выход";
             this.ToolStripButtonExit.ToolTipText = "Выход";
             this.ToolStripButtonExit.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -285,6 +288,16 @@
             this.ToolStripButtonOrder.Text = "Заказы";
             this.ToolStripButtonOrder.Click += new System.EventHandler(this.ToolStripMenuOrder_Click);
             // 
+            // ToolStripButtonRequest
+            // 
+            this.ToolStripButtonRequest.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButtonRequest.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButtonRequest.Image")));
+            this.ToolStripButtonRequest.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ToolStripButtonRequest.Name = "ToolStripButtonRequest";
+            this.ToolStripButtonRequest.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButtonRequest.Text = "SQL-Запросы";
+            this.ToolStripButtonRequest.Click += new System.EventHandler(this.ToolStripMenuSQL_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,10 +326,10 @@
 
         private System.Windows.Forms.MenuStrip MenuStripMain;
         private System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem InfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemExit;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemInfo;
         private System.Windows.Forms.ToolStripMenuItem ManualToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ItemsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemItems;
         private System.Windows.Forms.ToolStripMenuItem EmployeeToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip ContextMenuStripMain;
         private System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem1;
@@ -332,8 +345,9 @@
         private System.Windows.Forms.ToolStripButton ToolStripButtonEmployee;
         private System.Windows.Forms.ToolStripButton ToolStripButtonReport;
         private System.Windows.Forms.ToolStripButton ToolStripButtonOrder;
-        private System.Windows.Forms.ToolStripMenuItem документыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DocumentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem OrdersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ReportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton ToolStripButtonRequest;
     }
 }

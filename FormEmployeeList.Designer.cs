@@ -196,7 +196,7 @@ namespace PharmacyDataBase
             this.toolStripButtonFind.Size = new System.Drawing.Size(62, 22);
             this.toolStripButtonFind.Text = "Поиск";
             this.toolStripButtonFind.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolStripButtonFind.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButtonFind.Click += new System.EventHandler(this.toolStripButtonFind_Click);
             // 
             // сотрудникBindingNavigator
             // 

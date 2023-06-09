@@ -36,7 +36,7 @@ namespace PharmacyDataBase
 
         private static FormOrdersList f;
 
-        public static FormOrdersList fs
+        public static FormOrdersList fo
         {
             get
             {
@@ -64,7 +64,7 @@ namespace PharmacyDataBase
                 id = (int)(((DataRowView)заказBindingSource.Current)["ID_Сотрудника"]);
             }
 
-            id = FormEmployeeList.fw.ShowSelectForm(id);
+            id = FormEmployeeList.fe.ShowSelectForm(id);
             if (id >= 0)
             {
                 MessageBox.Show(id.ToString());
@@ -75,9 +75,17 @@ namespace PharmacyDataBase
 
         private void toolStripButtonSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.товары_в_заказеBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.pharmacyDataSet);
+            try
+            {
+                this.Validate();
+                this.товары_в_заказеBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.pharmacyDataSet);
+                MessageBox.Show("Данные успешно сохранены!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

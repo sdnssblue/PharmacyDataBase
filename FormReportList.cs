@@ -33,7 +33,7 @@ namespace PharmacyDataBase
 
         private static FormReportList f;
 
-        public static FormReportList fw
+        public static FormReportList fr
         {
             get
             {

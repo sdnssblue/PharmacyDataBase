@@ -78,6 +78,12 @@
     <Compile Include="FormReportList.Designer.cs">
       <DependentUpon>FormReportList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSQL.Designer.cs">
+      <DependentUpon>FormSQL.cs</DependentUpon>
+    </Compile>
     <Compile Include="PharmacyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormReportList.resx">
       <DependentUpon>FormReportList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSQL.resx">
+      <DependentUpon>FormSQL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -162,6 +171,7 @@
     <Content Include="Resources\ItemPictures\furacilin.jpg" />
     <Content Include="Resources\ItemPictures\paracetamol-500-mg.jpg" />
     <Content Include="Resources\ItemPictures\paracetamol.jpg" />
+    <None Include="Resources\Interface\sql.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

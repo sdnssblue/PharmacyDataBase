@@ -48,17 +48,22 @@ namespace PharmacyDataBase
 
         private void ToolStripMenuEmployee_Click(object sender, EventArgs e)
         {
-            FormEmployeeList.fw.ShowForm();
+            FormEmployeeList.fe.ShowForm();
         }
 
         private void ToolStripMenuReport_Click(object sender, EventArgs e)
         {
-            FormReportList.fw.ShowForm();
+            FormReportList.fr.ShowForm();
         }
 
         private void ToolStripMenuOrder_Click(object sender, EventArgs e)
         {
-            FormOrdersList.fs.ShowForm();
+            FormOrdersList.fo.ShowForm();
+        }
+
+        private void ToolStripMenuSQL_Click(object sender, EventArgs e)
+        {
+            FormSQL.fs.ShowForm();
         }
     }
 }

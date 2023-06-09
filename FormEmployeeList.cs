@@ -32,7 +32,7 @@ namespace PharmacyDataBase
 
         private static FormEmployeeList f;
 
-        public static FormEmployeeList fw
+        public static FormEmployeeList fe
         {
             get
             {
@@ -52,11 +52,11 @@ namespace PharmacyDataBase
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void toolStripButtonFind_Click(object sender, EventArgs e)
         {
             if (toolStripTextBoxFind.Text == "")
             {
-                MessageBox.Show("Вы ничего не задали", "Внимание",
+                MessageBox.Show("Вы ничего не задали!", "Внимание!",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -74,7 +74,7 @@ namespace PharmacyDataBase
                 сотрудникBindingSource.Position = indexPos;
             else
             {
-                MessageBox.Show("Таких сотрудников нет", "Внимание",
+                MessageBox.Show("Таких сотрудников нет!", "Внимание!",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                 сотрудникBindingSource.Position = 0;
             }
@@ -91,7 +91,7 @@ namespace PharmacyDataBase
             {
                 if (toolStripTextBoxFind.Text == "")
                 {
-                    MessageBox.Show("Вы ничего не задали", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Вы ничего не задали!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -108,7 +108,7 @@ namespace PharmacyDataBase
             else { сотрудникBindingSource.Filter = ""; }
             if (сотрудникBindingSource.Count == 0)
             {
-                MessageBox.Show("Таких сотрудников не существует.");
+                MessageBox.Show("Таких сотрудников не существует!");
                 сотрудникBindingSource.Filter = "";
                 checkBoxFind.Checked = false;
             }
